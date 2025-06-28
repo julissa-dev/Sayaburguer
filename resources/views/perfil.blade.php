@@ -141,5 +141,84 @@
     </script>
 
     <script src="{{ asset('js/header.js') }}"></script>
+
+   <footer style="background: #FFD600; font-family: 'Montserrat', Arial, sans-serif; color: #222; font-size: 15px; margin-top: 48px;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 48px 32px; display: flex; flex-wrap: wrap; gap: 50px; justify-content: space-between;">
+
+    <!-- Contacto -->
+    <div style="flex: 1 1 250px; min-width: 220px;">
+      <h4 style="font-weight: 700; font-size: 1.2em; margin-bottom: 16px;">
+        <i class="fas fa-headset" style="margin-right: 8px;"></i>Contacto
+      </h4>
+      <p style="margin: 8px 0;">
+        <i class="fas fa-phone-alt" style="margin-right: 8px;"></i> (01) 505 0000
+      </p>
+      <p style="margin: 8px 0;">
+        <i class="fas fa-envelope" style="margin-right: 8px;"></i> contacto@sayaburger.com
+      </p>
+      <p style="margin: 8px 0;">
+        <i class="fas fa-clock" style="margin-right: 8px;"></i> 12:00 p.m. - 11:00 p.m.
+      </p>
+      <h4 style="font-weight: 700; font-size: 1.2em; margin: 24px 0 12px;">
+        <i class="fas fa-share-alt" style="margin-right: 8px;"></i>Síguenos
+      </h4>
+      <div style="display: flex; gap: 16px;">
+        <a href="#" style="color: #222; text-decoration: none;"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" style="color: #222; text-decoration: none;"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" style="color: #222; text-decoration: none;"><i class="fab fa-tiktok fa-lg"></i></a>
+      </div>
+    </div>
+
+    <!-- Enlaces -->
+    <div style="flex: 1 1 200px; min-width: 180px;">
+      <h4 style="font-weight: 700; font-size: 1.2em; margin-bottom: 16px;">
+        <i class="fas fa-link" style="margin-right: 8px;"></i>Enlaces
+      </h4>
+      <nav style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="{{ route('home') }}" style="color: #222; text-decoration: none;">Inicio</a>
+        <a href="{{ route('menu') }}" style="color: #222; text-decoration: none;">Menú</a>
+        <a href="{{ route('promociones') }}" style="color: #222; text-decoration: none;">Promociones</a>
+        <a href="{{ route('perfil') }}" style="color: #222; text-decoration: none;">Perfil</a>
+        <a href="#" style="color: #222; text-decoration: none;">Ubícanos</a>
+      </nav>
+    </div>
+
+    <!-- Sobre Nosotros -->
+    <div style="flex: 1 1 250px; min-width: 220px;">
+      <h4 style="font-weight: 700; font-size: 1.2em; margin-bottom: 16px;">
+        <i class="fas fa-info-circle" style="margin-right: 8px;"></i>Sobre Nosotros
+      </h4>
+      <p style="margin: 8px 0; line-height: 1.5;">
+        Somos una hamburguesería apasionada por la calidad y el sabor. Ofrecemos ingredientes frescos, atención personalizada y un ambiente acogedor para toda la familia.
+      </p>
+    </div>
+
+    <!-- Promesa & Métodos de Pago -->
+    <div style="flex: 1 1 250px; min-width: 220px;">
+      <h4 style="font-weight: 700; font-size: 1.2em; margin-bottom: 16px;">
+        <i class="fas fa-star" style="margin-right: 8px;"></i>Nuestra Promesa
+      </h4>
+      <p style="margin: 8px 0; line-height: 1.5;">
+        100% ingredientes frescos, atención rápida y hamburguesas irresistibles.  
+        ¡Te esperamos para que vivas la mejor experiencia Saya Burger!
+      </p>
+
+      <div style="margin-top: 16px;">
+        <span style="display: flex; align-items: center; gap: 6px;">
+          <i class="fas fa-truck fa-lg"></i> Delivery a Domicilio
+        </span>
+        <span style="display: flex; align-items: center; gap: 6px;">
+          <i class="fas fa-store fa-lg"></i> Recoge en el Local
+        </span>
+    </div>
+
+  </div>
+
+  <div style="border-top: 1px solid #222; text-align: center; padding: 20px 0 12px; width: 100%; font-size: 14px;">
+  &copy; {{ date('Y') }} Saya Burger. Todos los derechos reservados.
+</div>
+
+</footer>
+
 </body>
 </html>

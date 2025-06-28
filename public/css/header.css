@@ -133,13 +133,57 @@ body {
 }
 
 .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #2e0c4c;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #2e0c4c;
+  cursor: pointer;
 }
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #ffe500;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-menu.hidden {
+    display: none;
+  }
+
+  .mobile-menu a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2e0c4c;
+    text-decoration: none;
+  }
+}
+
+
 
 .dropdown {
     position: relative;

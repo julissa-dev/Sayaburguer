@@ -55,7 +55,7 @@ Route::post('/carrito/añadir', [CarritoController::class, 'añadirProducto'])->
 
 Route::get('/productos/{producto:slug}', [ProductoController::class, 'show'])->name('productos.show');
 
-Route::get('/promociones', [PromocionController::class, 'index'])->name('promocion');
+Route::get('/promociones', [PromocionController::class, 'index'])->name('promociones');
 
 Route::post('/carrito/añadir-promocion', [CarritoController::class, 'añadirPromocion'])->name('carrito.addPromo');
 

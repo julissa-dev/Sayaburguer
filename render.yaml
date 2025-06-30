@@ -1,21 +1,16 @@
 services:
   - type: web
     name: sayaburguer-4
+    env: docker
     plan: free
-    buildCommand: |
-      composer install --no-dev --optimize-autoloader
-      php artisan key:generate --force || true
-      php artisan config:cache
-    startCommand: |
-      php artisan migrate --force || true
-      php artisan serve --host=0.0.0.0 --port=$PORT
+    branch: main
     envVars:
       - key: APP_NAME
         value: SayaBurger
       - key: APP_ENV
         value: production
       - key: APP_DEBUG
-        value: true
+        value: false
       - key: APP_URL
         value: https://sayaburguer-4.onrender.com
       - key: APP_KEY

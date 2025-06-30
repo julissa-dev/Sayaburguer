@@ -1,9 +1,0 @@
-.git
-node_modules
-vendor
-.env
-*.log
-storage/*.key
-.idea
-.vscode
-.DS_Store

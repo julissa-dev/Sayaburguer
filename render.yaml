@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: sayaburguer-web
+    env: php
+    buildCommand: |
+      composer install --no-dev --optimize-autoloader
+    startCommand: |
+      php artisan migrate --force && php artisan serve --host 0.0.0.0 --port 10000
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        value: base64:+jQOn8teLJjfICfrtmDCT6AMAtRvc4Qdz2CZjDL/36Y=
+      - key: APP_URL
+        value: https://sayaburguer-web.onrender.com
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: sayaburguer-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: sayaburguer-db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: sayaburguer-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: sayaburguer-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: sayaburguer-db
+          property: password
+
+databases:
+  - name: sayaburguer-db
+    plan: free

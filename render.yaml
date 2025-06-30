@@ -3,19 +3,17 @@ services:
     name: sayaburguer-4
     plan: free
     env: docker
-    buildCommand: ""  # No se usa, se construye con Dockerfile
-    startCommand: ""  # Lo maneja el CMD del Dockerfile
     envVars:
       - key: APP_NAME
         value: SayaBurger
       - key: APP_ENV
         value: production
-      - key: APP_DEBUG
-        value: false
-      - key: APP_URL
-        value: https://sayaburguer-4.onrender.com
       - key: APP_KEY
         value: base64:+jQOn8teLJjfICfrtmDCT6AMAtRvc4Qdz2CZjDL/36Y=
+      - key: APP_DEBUG
+        value: true
+      - key: APP_URL
+        value: https://sayaburguer-4.onrender.com
       - key: DB_CONNECTION
         value: mysql
       - key: DB_HOST

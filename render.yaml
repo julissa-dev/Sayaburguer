@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: Sayaburguer-Deploy
+    name: Sayaburguer-4
     plan: free
     envVars:
       - key: APP_NAME
@@ -10,10 +10,10 @@ services:
       - key: APP_KEY
         value: base64:+jQOn8teLJjfICfrtmDCT6AMAtRvc4Qdz2CZjDL/36Y=
       - key: APP_URL
-        value:  https://sayaburguer-3.onrender.com
+        value: https://sayaburguer-4.onrender.com  
+
       - key: APP_DEBUG
         value: false
-
 
       - key: DB_CONNECTION
         value: pgsql

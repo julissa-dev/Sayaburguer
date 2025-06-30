@@ -2,6 +2,10 @@ services:
   - type: web
     name: Sayaburguer-4
     plan: free
+    buildCommand: |
+      composer install --no-dev --optimize-autoloader
+    startCommand: |
+      php artisan migrate --force
     envVars:
       - key: APP_NAME
         value: Laravel
@@ -10,11 +14,9 @@ services:
       - key: APP_KEY
         value: base64:+jQOn8teLJjfICfrtmDCT6AMAtRvc4Qdz2CZjDL/36Y=
       - key: APP_URL
-        value: https://sayaburguer-4.onrender.com  
-
+        value: https://sayaburguer-4.onrender.com
       - key: APP_DEBUG
-        value: false
-
+        value: true
       - key: DB_CONNECTION
         value: pgsql
       - key: DB_HOST

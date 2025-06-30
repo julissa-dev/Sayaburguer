@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     git \
     libpq-dev \
-    nodejs npm
+    npm
 
 RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql
 

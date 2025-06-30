@@ -1,7 +1,6 @@
 services:
   - type: web
     name: sayaburguer-web
-    env: php
     buildCommand: |
       composer install --no-dev --optimize-autoloader
     startCommand: |

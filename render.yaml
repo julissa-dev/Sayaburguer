@@ -3,6 +3,8 @@ services:
     name: sayaburguer-4
     plan: free
     env: docker
+    buildCommand: ""  # No se usa, se construye con Dockerfile
+    startCommand: ""  # Lo maneja el CMD del Dockerfile
     envVars:
       - key: APP_NAME
         value: SayaBurger

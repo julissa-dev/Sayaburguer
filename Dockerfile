@@ -17,28 +17,28 @@ RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-
 COPY . /var/www/html
-
 
 RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|' /etc/apache2/sites-available/000-default.conf
 
-
 RUN a2enmod rewrite
-
 
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
 
 WORKDIR /var/www/html
 
-
 RUN composer install --no-dev --optimize-autoloader
+
+
+RUN php artisan config:clear
+RUN php artisan config:cache
 
 
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 
 EXPOSE 80
+
 
 CMD php artisan migrate --force && apache2-foreground
